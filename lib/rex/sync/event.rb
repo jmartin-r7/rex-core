@@ -66,7 +66,7 @@ class Event
       break if (self.state == true)
 
       Timeout.timeout(t) {
-        self.cond.wait(self.mutex)
+        self.cond.wait(self.mutex, t)
       }
     }
 
